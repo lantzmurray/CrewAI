@@ -1,0 +1,26 @@
+###tasks.yaml###
+
+
+collect_preferences_task:
+  description: >
+    Ask the user for their meal preferences, including any dietary restrictions, preferred cuisines, meal types, preferred cooking time, level of difficulty, and the number of meals to be generated.
+  expected_output: >
+    Collect user preferences including dietary restrictions, preferred cuisines, meal types, cooking time, difficulty level, and the number of meals (maximum of 5).
+  agent: user_input_agent
+
+
+
+suggest_ingredients_task:
+  description: >
+    Based on the user input, suggest a list of ingredients that could work for their preferences.
+  expected_output: >
+    Suggest ingredients based on any user-provided preferences.
+  agent: ingredient_agent
+
+generate_recipe_task:
+  description: >
+    Use the input provided to generate a recipe tailored to the user's preferences, including cooking time and difficulty level.
+  expected_output: >
+    A recipe generated based on the provided input, customized for the user’s preferred cooking time, difficulty level, and number of meals.
+  agent: recipe_agent
+  output_file: meal_recipe.md

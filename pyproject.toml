@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "mealgenerator"
+version = "0.1.0"
+description = "mealgenerator using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.51.0" }
+
+[tool.poetry.scripts]
+mealgenerator = "mealgenerator.main:run"
+run_crew = "mealgenerator.main:run"
+train = "mealgenerator.main:train"
+replay = "mealgenerator.main:replay"
+test = "mealgenerator.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
