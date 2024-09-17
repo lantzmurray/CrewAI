@@ -1,61 +1,32 @@
-# Mealgenerator Crew
+Mealgenerator Crew
+Welcome to the Mealgenerator Crew project, powered by crewAI. This project is designed to help you set up a multi-agent AI system for meal planning, leveraging the flexible framework provided by crewAI. The goal of this project is to generate customized meal plans based on user preferences, dietary restrictions, and ingredient specifications.
 
-Welcome to the Mealgenerator Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Features
+Collect user preferences for meal planning, including dietary restrictions and cooking difficulty.
+Generate personalized meal plans with ingredients based on user input.
+Supports customization of meal types, cuisines, and cooking time.
+Installation
+Ensure you have Python version between 3.10 and 3.13 installed on your system. This project uses Poetry for dependency management and package handling, offering a seamless setup and execution experience.
 
-## Installation
+Steps to Set Up
+Install Poetry by typing the following command: pip install poetry
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [Poetry](https://python-poetry.org/) for dependency management and package handling, offering a seamless setup and execution experience.
+Navigate to your project directory: cd mealgenerator
 
-First, if you haven't already, install Poetry:
+Lock and install dependencies: First, type: poetry lock Then, type: poetry install
 
-```bash
-pip install poetry
-```
+Activate the virtual environment if it is not automatically activated: poetry shell
 
-Next, navigate to your project directory and install the dependencies:
+Running the Mealgenerator
+After installation, you can run the meal generator by typing: python -m src.mealgenerator.main run
 
-1. First lock the dependencies and then install them:
-```bash
-poetry lock
-```
-```bash
-poetry install
-```
-### Customizing
+Customization
+This project allows users to customize the meal generation process through simple inputs, such as:
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/mealgenerator/config/agents.yaml` to define your agents
-- Modify `src/mealgenerator/config/tasks.yaml` to define your tasks
-- Modify `src/mealgenerator/crew.py` to add your own logic, tools and specific args
-- Modify `src/mealgenerator/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
-```
-or
-```bash
-poetry run mealgenerator
-```
-
-This command initializes the mealgenerator Crew, assembling the agents and assigning them tasks as defined in your configuration.
-
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
-
-## Understanding Your Crew
-
-The mealgenerator Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the Mealgenerator Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+Dietary restrictions
+Preferred cuisines
+Meal types (e.g., breakfast, lunch, dinner)
+Cooking time
+Difficulty level
+Ingredients to avoid (e.g., allergens like nuts or specific dislikes)
+By inputting your preferences, the system will generate tailored meal plans suited to your needs.
